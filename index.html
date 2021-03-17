@@ -8,14 +8,16 @@
 			const actions = {
 				'google': 'https://www.google.com/search',
 				'duckduckgo': 'https://duckduckgo.com/',
-				'bing': 'https://www.bing.com/search'
+				'bing': 'https://www.bing.com/search',
 				'ask': 'https://www.ask.com/web'
 			}
-			
+
 			const form = document.getElementById('searchForm');
+			
 			const selectedEngine = document.querySelector('input[name=engine]:checked');
 			const action = actions[selectedEngine.value];
 			form.setAttribute('action', action)	
+		
 		}
     
 	window.addEventListener("load", function() {
@@ -29,18 +31,22 @@
 <body>
 	
 	<form id="searchForm">
-		<input type="text" name="q"/>
+		<input type='text' name='q'/>
 		<label>
-			<input type="radio" name="engine" value="google"/>Google
+			<input type="radio" name="engine" value="google"/>
+			Google
 		</label>
 		<label>
-			<input type="radio" name="engine" value="duckduckgo"/>DuckDuckGo
+			<input type="radio" name="engine" value="duckduckgo"/>
+			DuckDuckGo
 		</label>
 		<label>
-			<input type="radio" name="engine" value="bing"/>Bing
+			<input type="radio" name="engine" value="bing"/>
+			Bing
 		</label>
 		<label>
-			<input type="radio" name="engine" value="ask"/>Ask
+			<input type="radio" name="engine" value="ask"/>
+			Ask
 		</label>
 		<input type="submit" value="GO!"/> 
 	</form>
